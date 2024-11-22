@@ -3,7 +3,7 @@ import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'; // You can use ico
 import { FaTwitter, FaEnvelope, FaYoutube } from 'react-icons/fa';
 import { FaXTwitter } from "react-icons/fa6";
 
-const Profile = () => {
+const App = () => {
   return (
     <div className="min-h-screen flex flex-col justify-start items-center bg-gray-100 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 font-mono">
       
@@ -87,7 +87,7 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default App;
 
 
 
