@@ -38,11 +38,11 @@ const App = () => {
             <img src="./rypto1.png" alt="Project 1" className="w-full h-48 object-cover" />
             <div className="p-4">
               <div className="flex justify-between items-center">
-                <a href="https://github.com/shola-devv/PRIVIMIGRATION" target="_blank" rel="noopener noreferrer" className="text-gray-700">
+                <a href="https://github.com/shola-devv" target="_blank" rel="noopener noreferrer" className="text-gray-700">
                   <FaGithub className="text-2xl hover:text-gray-900" />
                 </a>
                 <p className='px-4'><span className='font-bold'>Cryptosnoop</span> - a crypto portfolio and tracker web-app, keeps track of the live statistics and prices of selected crtptocurrencies</p>
-                <a href="https://example.com" target="_blank" rel="noopener noreferrer" className="text-gray-700">
+                <a href="crypto-snoop-v2.vercel.app" target="_blank" rel="noopener noreferrer" className="text-gray-700">
                   <FaExternalLinkAlt className="text-2xl hover:text-gray-900" />
                 </a>
               </div>
@@ -54,11 +54,11 @@ const App = () => {
             <img src="./journals2.png" alt="Project 2" className="w-full h-48 object-cover" />
             <div className="p-4">
               <div className="flex justify-between items-center">
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-700">
+                <a href="https://github.com/shola-devv" target="_blank" rel="noopener noreferrer" className="text-gray-700">
                   <FaGithub className="text-2xl hover:text-gray-900" />
                 </a>
                 <p className='px-4'><span className='font-bold'>journals2me</span> - a journaling web-app, it helps you safely keep your thoughts in journal form</p>
-                <a href="https://example.com" target="_blank" rel="noopener noreferrer" className="text-gray-700">
+                <a href="https://journals2me.vercel.app" target="_blank" rel="noopener noreferrer" className="text-gray-700">
                   <FaExternalLinkAlt className="text-2xl hover:text-gray-900" />
                 </a>
               </div>
@@ -70,11 +70,11 @@ const App = () => {
             <img src="./privi.png" alt="Project 3" className="w-full h-48 object-cover" />
             <div className="p-4">
               <div className="flex justify-between items-center">
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-700">
+                <a href="https://github.com/shola-devv/PRIVIMIGRATION" target="_blank" rel="noopener noreferrer" className="text-gray-700">
                   <FaGithub className="text-2xl hover:text-gray-900" />
                 </a>
                 <p className='px-4'><span className='font-bold'>Privimigration</span> - a social media web-app where people can share their journey plans, get advice and give advice on imigration</p>
-                <a href="https://example.com" target="_blank" rel="noopener noreferrer" className="text-gray-700">
+                <a href="https://privimigration.vercel.app" target="_blank" rel="noopener noreferrer" className="text-gray-700">
                   <FaExternalLinkAlt className="text-2xl hover:text-gray-900" />
                 </a>
               </div>
