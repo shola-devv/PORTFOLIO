@@ -13,7 +13,7 @@ const App = () => {
         
         {/* Descriptions */}
         <div className="mt-4 space-y-2">
-          <p className="text-lg sm:text-md md:text-2xl text-gray-700">Fullstack web developer</p>
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-700">Fullstack web developer</p>
           <p className="text-lg sm:text-xl md:text-2xl text-gray-700">Web3 developer</p>
           <p className="text-lg sm:text-xl md:text-2xl text-gray-700">Smart contract auditor</p>
         </div>
