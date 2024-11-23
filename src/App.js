@@ -42,7 +42,7 @@ const App = () => {
                   <FaGithub className="text-2xl hover:text-gray-900" />
                 </a>
                 <p className='px-4'><span className='font-bold'>Cryptosnoop</span> - a crypto portfolio and tracker web-app, keeps track of the live statistics and prices of selected crtptocurrencies</p>
-                <a href="crypto-snoop-v2.vercel.app" target="_blank" rel="noopener noreferrer" className="text-gray-700">
+                <a href="https://crypto-snoop-v2.vercel.app" target="_blank" rel="noopener noreferrer" className="text-gray-700">
                   <FaExternalLinkAlt className="text-2xl hover:text-gray-900" />
                 </a>
               </div>
