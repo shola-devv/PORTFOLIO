@@ -113,7 +113,7 @@ const App = () => {
 
 
         {/* Button Section */}
-        <div className="flex flex-col space-y-4 mb-10 max-w-xs sm:max-w-md lg:max-w-lg xl:max-w-xl">
+        <div className="flex flex-col space-y-4 mb-8 max-w-xs sm:max-w-md lg:max-w-lg xl:max-w-xl">
           <a href="https://github.com/shola-devv" target="_blank" rel="noopener noreferrer">
             <button className="px-6 py-2 flex text-white rounded-full font-semibold bg-gradient-to-b from-blue-300/80 to-blue-600 shadow-[0_10px_15px_-2px_rgba(0,0,0,0.4)] active:translate-y-1 active:shadow-none hover:brightness-95 overflow-hidden">
               github
