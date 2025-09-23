@@ -7,6 +7,7 @@ import { useState } from 'react';
 const App = () => {
   const year = useState(new Date().getFullYear());
    const myUsername = "0xfemmanuel"  // without @ ... "https://x.com/0xfeMMANUEL"
+   const roles = ['◽ Smart contracts development - solidity', '◽ Fullstack web development - MERN', '◽ Smart contracts auditing']
   const [projectData, setprojectData ] = useState([
     {
       project: 1,
@@ -103,15 +104,9 @@ const App = () => {
       <p className="text-lg sm:text-xl md:text-2xl text-white font-bold">
         WEB3 SOFTWARE DEVELOPER
       </p>
-      <p className="text-lg sm:text-xl md:text-2xl text-white">
-        smart contracts development - Solidity
-      </p>
-      <p className="text-lg sm:text-xl md:text-2xl text-white">
-        Fullstack web development - Mern
-      </p>
-      <p className="text-lg sm:text-xl md:text-2xl text-white">
-        Smart contracts auditing
-      </p>
+     <p className="list-disc text-lg sm:text-xl md:text-2xl text-white ">{roles[0]}</p>
+     <p className="text-lg sm:text-xl md:text-2xl text-white ">{roles[1]}</p>
+     <p className="text-lg sm:text-xl md:text-2xl text-white ">{roles[2]}</p>
     </div>
   </div>
 </div>
@@ -182,8 +177,8 @@ const App = () => {
           {/* Green "something cool" text */}
           <div className="text-center mt-12">
             <a href="https://emmanuel-not-devin.vercel.app">
-              <p className="text-green-400 font-mono text-xl font-bold underline">
-                wanna see something cool?
+              <p className="text-green-400 font-mono text-sm font-bold underline">
+                something cool
               </p>
             </a>
           </div>
