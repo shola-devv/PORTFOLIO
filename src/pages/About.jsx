@@ -1,6 +1,10 @@
 import React from "react";
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'; // You can use icons from 'react-icons'
+import { FaTwitter, FaEnvelope, FaYoutube, FaUser } from 'react-icons/fa';
+import { FaXTwitter } from "react-icons/fa6";
 
 const Portfolio = () => {
+  const myUsername = "0xfemmanuel"  // without @ ... "https://x.com/0xfeMMANUEL"
 const skills = [
 { name: "HTML", color: "bg-purple-100", icon: "🌐" },
 { name: "CSS", color: "bg-purple-100", icon: "🎨" },
@@ -64,7 +68,7 @@ Hello, I'm Shola Emmanuel Fayinminu </h1>
     <span className="text-black">
       building software that feels forward-looking
     {" "}
-    — my work and portfolio reflects just that.
+    - my work and portfolio reflects just that.
     </span>
   </p>
 </section>
@@ -78,7 +82,7 @@ Hello, I'm Shola Emmanuel Fayinminu </h1>
           key={i}
           className="px-4 py-2 rounded-xl bg-black backdrop-blur-md text-white font-medium shadow-sm"
         >
-          {skill.icon} {skill.name}
+           {skill.name}
         </span>
       ))}
     </div>
@@ -107,8 +111,21 @@ Hello, I'm Shola Emmanuel Fayinminu </h1>
           </a>
         </div>
       ))}
+        
     </div>
   </section>
+  <div className="mt-4 flex space-x-1">
+          <a href={`https://twitter.com/intent/follow?screen_name=${myUsername}`}  target="_blank" rel="noopener noreferrer">
+          <FaXTwitter  className="ml-2 text-2xl text-black hover:text-grey-700 transition duration-300 hadow-lg active: translate-x-2" />
+             </a>
+             <a href="https://github.com/shola-devv" target="_blank" rel="noopener noreferrer">
+            <FaGithub className="ml-2 text-2xl text-black hover:text-grey-700 transition duration-300 hadow-lg active: translate-x-2" />
+             </a>
+             <a href="mailto:creekemmanuelf@gmail.com" target="_blank" rel="noopener noreferrer">
+            <FaEnvelope className="ml-2 text-2xl text-black hover:text-grey-700 transition duration-300 shadow-lg active: translate-x-2" />
+             </a>
+            
+        </div>
 </div>
 
 
