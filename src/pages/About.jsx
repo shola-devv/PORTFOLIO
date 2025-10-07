@@ -15,7 +15,6 @@ const skills = [
 { name: "Next.js", color: "bg-purple-100", icon: "⬛" },
 { name: "Node.js", color: "bg-purple-100", icon: "🟩" },
 { name: "Express.js", color: "bg-purple-100", icon: "📦" },
-{ name: "Nest.js", color: "bg-purple-100", icon: "🔥" },
 { name: "Foundry", color: "bg-purple-100", icon: "" },
 { name: "Remix", color: "bg-purple-100", icon: "" },
 { name: "Web3js", color: "bg-purple-100", icon: "" },
@@ -114,18 +113,18 @@ Hello, I'm Shola Emmanuel Fayinminu </h1>
         
     </div>
   </section>
-  <div className="mt-4 flex space-x-1">
-          <a href={`https://twitter.com/intent/follow?screen_name=${myUsername}`}  target="_blank" rel="noopener noreferrer">
-          <FaXTwitter  className="ml-2 text-2xl text-black hover:text-grey-700 transition duration-300 hadow-lg active: translate-x-2" />
-             </a>
-             <a href="https://github.com/shola-devv" target="_blank" rel="noopener noreferrer">
-            <FaGithub className="ml-2 text-2xl text-black hover:text-grey-700 transition duration-300 hadow-lg active: translate-x-2" />
-             </a>
-             <a href="mailto:creekemmanuelf@gmail.com" target="_blank" rel="noopener noreferrer">
-            <FaEnvelope className="ml-2 text-2xl text-black hover:text-grey-700 transition duration-300 shadow-lg active: translate-x-2" />
-             </a>
-            
-        </div>
+  <div className="mt-4 flex justify-center space-x-1">
+  <a href={`https://twitter.com/intent/follow?screen_name=${myUsername}`} target="_blank" rel="noopener noreferrer">
+    <FaXTwitter className="ml-2 text-2xl text-black hover:text-gray-700 transition duration-300 shadow-lg active:translate-x-2" />
+  </a>
+  <a href="https://github.com/shola-devv" target="_blank" rel="noopener noreferrer">
+    <FaGithub className="ml-2 text-2xl text-black hover:text-gray-700 transition duration-300 shadow-lg active:translate-x-2" />
+  </a>
+  <a href="mailto:creekemmanuelf@gmail.com" target="_blank" rel="noopener noreferrer">
+    <FaEnvelope className="ml-2 text-2xl text-black hover:text-gray-700 transition duration-300 shadow-lg active:translate-x-2" />
+  </a>
+</div>
+
 </div>
 
 
