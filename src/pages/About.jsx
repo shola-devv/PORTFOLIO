@@ -45,7 +45,7 @@ link: "https://privimigration.vercel.app",
 
 return ( <div className="max-w-5xl mx-auto px-4 py-10 space-y-16">
 {/* About Me */} <section className="text-center"> <img
-       src="/profile.jpg"
+       src="/mypic.jpeg"
        alt="Profile"
        className="w-40 h-40 mx-auto rounded-full shadow-lg"
      /> <h1 className="text-3xl md:text-4xl font-bold mt-6">
