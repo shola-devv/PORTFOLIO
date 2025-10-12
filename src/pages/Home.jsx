@@ -92,7 +92,7 @@ const navigate = useNavigate();
   
      
       {/* Overlay (your content) */}
-      <div className="relative flex flex-col justify-start items-center min-h-screen px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 bg-black/20">
+      <div className="relative flex flex-col justify-start items-center min-h-screen px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 lg:pt-12 md:pt-12 bg-black/20">
         
         {/* Header Section */}
         <div className="relative flex justify-center mt-10 mb-8">
@@ -146,7 +146,7 @@ const navigate = useNavigate();
           
         </div>
   
-        {/* Projects Section */}
+        {/* Projects Section 
         <div className="w-full max-w-screen-lg px-6">
           <h2 className="text-3xl sm:text-3xl font-semibold text-center text-white mb-8">
             PROJECTS
@@ -176,7 +176,7 @@ const navigate = useNavigate();
             ))}
           </div>
   
-          {/* Green "something cool" text */}
+          {/* Green "something cool" text *
           <div className="text-center mt-12">
             <a href="https://emmanuel-not-devin.vercel.app">
               <p className="text-white-400 font-mono text-sm font-bold underline">
@@ -185,6 +185,7 @@ const navigate = useNavigate();
             </a>
           </div>
         </div>
+        */}
       </div>
     </div>
   );
