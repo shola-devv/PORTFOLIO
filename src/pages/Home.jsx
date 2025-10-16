@@ -124,14 +124,14 @@ const buzzClick = () => {
         {/* Button Section */}
         <div className="flex flex-col space-y-4 mb-8 max-w-xs sm:max-w-md lg:max-w-lg xl:max-w-xl">
           <a href="https://github.com/shola-devv" target="_blank" rel="noopener noreferrer">
-            <button onClick={buzzClick} className="px-6 py-2 flex text-white rounded-full font-semibold bg-gradient-to-b from-blue-300/80 to-blue-600 shadow-[0_10px_15px_-2px_rgba(0,0,0,0.4)] active:translate-y-1 active:shadow-none hover:brightness-95 overflow-hidden">
+            <button onClick={buzzClick()} className="px-6 py-2 flex text-white rounded-full font-semibold bg-gradient-to-b from-blue-300/80 to-blue-600 shadow-[0_10px_15px_-2px_rgba(0,0,0,0.4)] active:translate-y-1 active:shadow-none hover:brightness-95 overflow-hidden">
               Github
               <FaGithub className="ml-2 text-2xl text-gray-200 hover:text-white transition duration-300" />
             </button>
           </a>
   
           <a href={`https://twitter.com/intent/follow?screen_name=${myUsername}`} target="_blank" rel="noopener noreferrer">
-            <button onClick={buzzClick} className="px-6 py-2 flex text-white rounded-full font-semibold bg-gradient-to-b from-blue-300/80 to-blue-600 shadow-[0_10px_15px_-2px_rgba(0,0,0,0.4)] active:translate-y-1 active:shadow-none hover:brightness-95 overflow-hidden">
+            <button onClick={buzzClick()} className="px-6 py-2 flex text-white rounded-full font-semibold bg-gradient-to-b from-blue-300/80 to-blue-600 shadow-[0_10px_15px_-2px_rgba(0,0,0,0.4)] active:translate-y-1 active:shadow-none hover:brightness-95 overflow-hidden">
             X
               <FaXTwitter className="text-2xl ml-6 text-gray-200 hover:text-white transition duration-300" />
            
@@ -139,14 +139,14 @@ const buzzClick = () => {
           </a>
   
           <a href="mailto:creekemmanuelf@gmail.com">
-            <button onClick={buzzClick} className="px-6 py-2 flex text-white rounded-full font-semibold bg-gradient-to-b from-blue-300/80 to-blue-600 shadow-[0_10px_15px_-2px_rgba(0,0,0,0.4)] active:translate-y-1 active:shadow-none hover:brightness-95 overflow-hidden">
+            <button onClick={buzzClick()} className="px-6 py-2 flex text-white rounded-full font-semibold bg-gradient-to-b from-blue-300/80 to-blue-600 shadow-[0_10px_15px_-2px_rgba(0,0,0,0.4)] active:translate-y-1 active:shadow-none hover:brightness-95 overflow-hidden">
             Email
             <FaEnvelope className="text-2xl ml-6 text-gray-200 hover:text-white transition duration-300" /> 
             </button>
           </a>
   
           
-            <button onClick={()=> {navigate("/About"); buzzClick}} className="px-6 py-2 flex text-white rounded-full font-semibold bg-gradient-to-b from-blue-300/80 to-blue-600 shadow-[0_10px_15px_-2px_rgba(0,0,0,0.4)] active:translate-y-1 active:shadow-none hover:brightness-95 overflow-hidden">
+            <button onClick={()=> {navigate("/About"); buzzClick();}} className="px-6 py-2 flex text-white rounded-full font-semibold bg-gradient-to-b from-blue-300/80 to-blue-600 shadow-[0_10px_15px_-2px_rgba(0,0,0,0.4)] active:translate-y-1 active:shadow-none hover:brightness-95 overflow-hidden">
               Aboutme
               <FaUser className="ml-2 text-2xl text-gray-200 hover:text-white transition duration-300" />
             </button>
