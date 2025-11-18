@@ -37,7 +37,7 @@ link: "https://journals2me.vercel.app",
 },
 {
 name: "Web3 landing pages",
-desc: "a collection of web3 themed landing pages - modern responsive, and built to showcase decentralized aps, Nft projects and blockchain startups ",
+desc: "a collection of web3 themed landing pages - , responsive, and built to showcase decentralized aps, Nft projects and blockchain startups ",
 link: "https://privimigration.vercel.app",
 },
 {
