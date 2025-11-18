@@ -1,5 +1,6 @@
 import BackgroundVideo from "./BackgroundVideo";
 
+
 export default function Layout({ children }) {
   return (
     <div className="relative min-h-screen w-full overflow-hidden font-mono">

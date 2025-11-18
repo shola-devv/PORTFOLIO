@@ -17,11 +17,11 @@ const skills = [
 { name: "Express.js", color: "bg-purple-100", icon: "📦" },
 { name: "Foundry", color: "bg-purple-100", icon: "" },
 { name: "Remix", color: "bg-purple-100", icon: "" },
-{ name: "Web3js", color: "bg-purple-100", icon: "" },
+{ name: "ethersjs", color: "bg-purple-100", icon: "" },
 { name: "Git", color: "bg-purple-100", icon: "" },
 { name: "MongoDB", color: "bg-purple-100", icon: "" },
 { name: "Truffle", color: "bg-purple-100", icon: "" },
-{ name: "Hardhat", color: "bg-purple-100", icon: "" },
+{ name: "viem", color: "bg-purple-100", icon: "" },
 ];
 
 const projects = [
@@ -36,11 +36,15 @@ desc: "a journaling web-app, it helps you safely keep your thoughts in journal f
 link: "https://journals2me.vercel.app",
 },
 {
-name: "Privimigration",
-desc: "a social media web-app where people can share their journey plans, get advice and give advice on imigration",
+name: "Web3 landing pages",
+desc: "a collection of web3 themed landing pages - modern responsive, and built to showcase decentralized aps, Nft projects and blockchain startups ",
 link: "https://privimigration.vercel.app",
 },
-
+{
+name: "Privimigration",
+desc: "a social media web-app where people can share their journey plans, get advice and give advice on imigration",
+link: "",
+},
 ];
 
 return ( <div className="max-w-5xl mx-auto px-4 py-10 space-y-16">
