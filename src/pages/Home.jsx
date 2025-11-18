@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom"
 const App = () => {
   const year = useState(new Date().getFullYear());
    const myUsername = "0xfemmanuel"  // without @ ... "https://x.com/0xfeMMANUEL" ['◽ Smart contracts development - solidity', '◽   Fullstack web3 development - MERN', '◽ Smart contracts auditing']
-   const roles = ['◽ builds fullstack web3 apps -MERN', '◽ writes and audit smart contracts -Solidity', '◽ writes about tech too ']
+   const roles = ['◽ builds fullstack web3 apps -MERN', '◽ writes and audits smart contracts -Solidity', '◽ writes about tech too ']
 const navigate = useNavigate();
 const buzzClick = () => {
    if(navigator.vibrate) {
