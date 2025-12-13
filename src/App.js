@@ -176,9 +176,10 @@ const App = () => {
   
             {/* Green "something cool" text */}
             <div className="text-center mt-12">
-              <p className="text-green-400 font-mono text-xl font-bold underline">
+              <a link="https://emmanuel-not-devin.vercel.app"><p className="text-green-400 font-mono text-xl font-bold underline">
                 wanna see something cool?
-              </p>
+              </p></a>
+             
             </div>
           </div>
         </div>
