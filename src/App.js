@@ -73,118 +73,122 @@ const App = () => {
  
   ])
 
-    return (
-      <div className="relative min-h-screen w-full overflow-hidden font-mono">
-        {/* Background Video */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute top-0 left-0 w-full h-full object-cover -z-10"
-        >
-          <source src="/videos/background.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+  return (
+    <div className="relative min-h-screen w-full overflow-hidden font-mono">
+      {/* Background Video */}
+      
+      <video
+  autoPlay
+  loop
+  muted
+  playsInline
+  className="fixed top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto transform -translate-x-1/2 -translate-y-1/2 object-cover object-center -z-10"
+>
+  <source src="/videos/background.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
   
-        {/* Overlay (your content) */}
-        <div className="relative flex flex-col justify-start items-center min-h-screen px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 bg-black/50">
-          
-          {/* Header Section */}
-          <div className="text-center mb-12">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-40 text-white">
-              Emmanuel Shola
-            </h1>
+      {/* Overlay (your content) */}
+      <div className="relative flex flex-col justify-start items-center min-h-screen px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 bg-black/50">
+        
+        {/* Header Section */}
+        <div className="text-center mb-12">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-40 text-white">
+            Emmanuel Shola
+          </h1>
   
-            {/* Descriptions */}
-            <div className="mt-4 space-y-2">
-              <p className="text-lg sm:text-xl md:text-2xl text-white font-bold">
-                WEB3 SOFTWARE DEVELOPER
-              </p>
-              <p className="text-lg sm:text-xl md:text-2xl text-gray-200">
-                smart contracts development - Solidity
-              </p>
-              <p className="text-lg sm:text-xl md:text-2xl text-gray-200">
-                Fullstack web development - Mern
-              </p>
-              <p className="text-lg sm:text-xl md:text-2xl text-gray-200">
-                Smart contracts auditing
-              </p>
-            </div>
+          {/* Descriptions */}
+          <div className="mt-4 space-y-2">
+            <p className="text-lg sm:text-xl md:text-2xl text-white font-bold">
+              WEB3 SOFTWARE DEVELOPER
+            </p>
+            <p className="text-lg sm:text-xl md:text-2xl text-white">
+              smart contracts development - Solidity
+            </p>
+            <p className="text-lg sm:text-xl md:text-2xl text-white">
+              Fullstack web development - Mern
+            </p>
+            <p className="text-lg sm:text-xl md:text-2xl text-white">
+              Smart contracts auditing
+            </p>
           </div>
+        </div>
   
-          {/* Button Section */}
-          <div className="flex flex-col space-y-4 mb-12 max-w-xs sm:max-w-md lg:max-w-lg xl:max-w-xl">
-            <a href="https://github.com/shola-devv" target="_blank" rel="noopener noreferrer">
-              <button className="px-6 py-2 flex text-white rounded-full font-semibold bg-gradient-to-b from-blue-300/80 to-blue-600 shadow-[0_7px_6px_-0px_rgba(0,0,0,0.25)] active:translate-y-1 active:shadow-none hover:brightness-95 border-b border-black/20 overflow-hidden">
-                github
-                <FaGithub className="ml-2 text-2xl text-gray-200 hover:text-white transition duration-300" />
-              </button>
-            </a>
+        {/* Button Section */}
+        <div className="flex flex-col space-y-4 mb-12 max-w-xs sm:max-w-md lg:max-w-lg xl:max-w-xl">
+          <a href="https://github.com/shola-devv" target="_blank" rel="noopener noreferrer">
+            <button className="px-6 py-2 flex text-white rounded-full font-semibold bg-gradient-to-b from-blue-300/80 to-blue-600 shadow-[0_10px_15px_-2px_rgba(0,0,0,0.4)] active:translate-y-1 active:shadow-none hover:brightness-95 overflow-hidden">
+              github
+              <FaGithub className="ml-2 text-2xl text-gray-200 hover:text-white transition duration-300" />
+            </button>
+          </a>
   
-            <a href={`https://twitter.com/intent/follow?screen_name=${myUsername}`} target="_blank" rel="noopener noreferrer">
-              <button className="px-6 py-2 flex text-white rounded-full font-semibold bg-gradient-to-b from-blue-300/80 to-blue-600 shadow-[0_7px_6px_-0px_rgba(0,0,0,0.25)] active:translate-y-1 active:shadow-none hover:brightness-95 border-b border-black/20 overflow-hidden">
-                x
-                <FaXTwitter className="text-2xl ml-6 text-gray-200 hover:text-white transition duration-300" />
-              </button>
-            </a>
+          <a href={`https://twitter.com/intent/follow?screen_name=${myUsername}`} target="_blank" rel="noopener noreferrer">
+            <button className="px-6 py-2 flex text-white rounded-full font-semibold bg-gradient-to-b from-blue-300/80 to-blue-600 shadow-[0_10px_15px_-2px_rgba(0,0,0,0.4)] active:translate-y-1 active:shadow-none hover:brightness-95 overflow-hidden">
+            X
+              <FaXTwitter className="text-2xl ml-6 text-gray-200 hover:text-white transition duration-300" />
+           
+            </button>
+          </a>
   
-            <a href="mailto:creekemmanuelf@gmail.com">
-              <button className="px-6 py-2 flex text-white rounded-full font-semibold bg-gradient-to-b from-blue-300/80 to-blue-600 shadow-[0_7px_6px_-0px_rgba(0,0,0,0.25)] active:translate-y-1 active:shadow-none hover:brightness-95 border-b border-black/20 overflow-hidden">
-                Email
-                <FaEnvelope className="text-2xl ml-2 text-gray-200 hover:text-white transition duration-300" />
-              </button>
-            </a>
+          <a href="mailto:creekemmanuelf@gmail.com">
+            <button className="px-6 py-2 flex text-white rounded-full font-semibold bg-gradient-to-b from-blue-300/80 to-blue-600 shadow-[0_10px_15px_-2px_rgba(0,0,0,0.4)] active:translate-y-1 active:shadow-none hover:brightness-95 overflow-hidden">
+              Email
+              <FaEnvelope className="text-2xl ml-2 text-gray-200 hover:text-white transition duration-300" />
+            </button>
+          </a>
   
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
-              <button className="px-6 py-2 flex text-white rounded-full font-semibold bg-gradient-to-b from-blue-300/80 to-blue-600 shadow-[0_7px_6px_-0px_rgba(0,0,0,0.25)] active:translate-y-1 active:shadow-none hover:brightness-95 border-b border-black/20 overflow-hidden">
-                Youtube
-                <FaYoutube className="ml-2 text-2xl text-gray-200 hover:text-white transition duration-300" />
-              </button>
-            </a>
-          </div>
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+            <button className="px-6 py-2 flex text-white rounded-full font-semibold bg-gradient-to-b from-blue-300/80 to-blue-600 shadow-[0_10px_15px_-2px_rgba(0,0,0,0.4)] active:translate-y-1 active:shadow-none hover:brightness-95 overflow-hidden">
+              Youtube
+              <FaYoutube className="ml-2 text-2xl text-gray-200 hover:text-white transition duration-300" />
+            </button>
+          </a>
+        </div>
   
-          {/* Projects Section */}
-          <div className="w-full max-w-screen-lg px-6">
-            <h2 className="text-3xl sm:text-3xl font-semibold text-center text-white mb-8">
-              PROJECTS
-            </h2>
+        {/* Projects Section */}
+        <div className="w-full max-w-screen-lg px-6">
+          <h2 className="text-3xl sm:text-3xl font-semibold text-center text-white mb-8">
+            PROJECTS
+          </h2>
   
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
-              {projectData.map((item) => (
-                <div
-                  key={item.name}
-                  className="backdrop-blur-md bg-white/20 shadow-lg rounded-lg overflow-hidden"
-                >
-                  <img src={item.image} alt={item.name} className="w-full h-48 object-cover" />
-                  <div className="p-4">
-                    <div className="flex justify-between items-center">
-                      <a href={item.githubLink} target="_blank" rel="noopener noreferrer" className="text-gray-200">
-                        <FaGithub className="text-2xl hover:text-white" />
-                      </a>
-                      <p className="px-4 text-white">
-                        <span className="font-bold">{item.name}</span> - a journaling web-app, it helps you safely keep your thoughts in journal form
-                      </p>
-                      <a href={item.externalLink} target="_blank" rel="noopener noreferrer" className="text-gray-200">
-                        <FaExternalLinkAlt className="text-2xl hover:text-white" />
-                      </a>
-                    </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
+            {projectData.map((item) => (
+              <div
+                key={item.name}
+                className="backdrop-blur-md bg-white/20 shadow-lg rounded-lg overflow-hidden"
+              >
+                <img src={item.image} alt={item.name} className="w-full h-48 object-cover" />
+                <div className="p-4">
+                  <div className="flex justify-between items-center">
+                    <a href={item.githubLink} target="_blank" rel="noopener noreferrer" className="text-gray-200">
+                      <FaGithub className="text-2xl hover:text-white" />
+                    </a>
+                    <p className="px-4 text-white">
+                      <span className="font-bold">{item.name}</span> - a journaling web-app, it helps you safely keep your thoughts in journal form
+                    </p>
+                    <a href={item.externalLink} target="_blank" rel="noopener noreferrer" className="text-gray-200">
+                      <FaExternalLinkAlt className="text-2xl hover:text-white" />
+                    </a>
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
+          </div>
   
-            {/* Green "something cool" text */}
-            <div className="text-center mt-12">
-              <a link="https://emmanuel-not-devin.vercel.app"><p className="text-green-400 font-mono text-xl font-bold underline">
+          {/* Green "something cool" text */}
+          <div className="text-center mt-12">
+            <a href="https://emmanuel-not-devin.vercel.app">
+              <p className="text-green-400 font-mono text-xl font-bold underline">
                 wanna see something cool?
-              </p></a>
-             
-            </div>
+              </p>
+            </a>
           </div>
         </div>
       </div>
-    );
+    </div>
+  );
+  
          
 }
 export default App;
