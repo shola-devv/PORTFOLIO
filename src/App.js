@@ -92,7 +92,7 @@ const App = () => {
       <div className="relative flex flex-col justify-start items-center min-h-screen px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 bg-black/20">
         
         {/* Header Section */}
-        <div className="relative flex justify-center mt-10 mb-20">
+        <div className="relative flex justify-center mt-10 mb-16">
   <div className="rounded-2xl bg-white/10 backdrop-blur-lg shadow-lg p-8 max-w-2xl w-full text-center">
     <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
       Emmanuel Shola
