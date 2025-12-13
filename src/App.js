@@ -76,20 +76,20 @@ const App = () => {
   return (
     <div className="relative min-h-screen w-full overflow-hidden font-mono">
       {/* Background Video */}
-      
       <video
   autoPlay
   loop
   muted
   playsInline
   className="fixed top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto transform -translate-x-1/2 -translate-y-1/2 object-cover object-center -z-10"
->
+   >
   <source src="/videos/background.mp4" type="video/mp4" />
   Your browser does not support the video tag.
 </video>
   
+     
       {/* Overlay (your content) */}
-      <div className="relative flex flex-col justify-start items-center min-h-screen px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 bg-neutral-50">
+      <div className="relative flex flex-col justify-start items-center min-h-screen px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 bg-black/20">
         
         {/* Header Section */}
         <div className="text-center mb-12">
