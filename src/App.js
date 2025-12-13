@@ -89,7 +89,7 @@ const App = () => {
 </video>
   
       {/* Overlay (your content) */}
-      <div className="relative flex flex-col justify-start items-center min-h-screen px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 bg-black/50">
+      <div className="relative flex flex-col justify-start items-center min-h-screen px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 bg-neutral-50">
         
         {/* Header Section */}
         <div className="text-center mb-12">
