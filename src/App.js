@@ -92,30 +92,33 @@ const App = () => {
       <div className="relative flex flex-col justify-start items-center min-h-screen px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 bg-black/20">
         
         {/* Header Section */}
-        <div className="text-center mb-12">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-40 text-white">
-            Emmanuel Shola
-          </h1>
-  
-          {/* Descriptions */}
-          <div className="mt-4 space-y-2">
-            <p className="text-lg sm:text-xl md:text-2xl text-white font-bold">
-              WEB3 SOFTWARE DEVELOPER
-            </p>
-            <p className="text-lg sm:text-xl md:text-2xl text-white">
-              smart contracts development - Solidity
-            </p>
-            <p className="text-lg sm:text-xl md:text-2xl text-white">
-              Fullstack web development - Mern
-            </p>
-            <p className="text-lg sm:text-xl md:text-2xl text-white">
-              Smart contracts auditing
-            </p>
-          </div>
-        </div>
-  
+        <div className="relative flex justify-center mt-10 mb-20">
+  <div className="rounded-2xl bg-white/10 backdrop-blur-lg shadow-lg p-8 max-w-2xl w-full text-center">
+    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+      Emmanuel Shola
+    </h1>
+
+    {/* Descriptions */}
+    <div className="mt-4 space-y-2">
+      <p className="text-lg sm:text-xl md:text-2xl text-white font-bold">
+        WEB3 SOFTWARE DEVELOPER
+      </p>
+      <p className="text-lg sm:text-xl md:text-2xl text-white">
+        smart contracts development - Solidity
+      </p>
+      <p className="text-lg sm:text-xl md:text-2xl text-white">
+        Fullstack web development - Mern
+      </p>
+      <p className="text-lg sm:text-xl md:text-2xl text-white">
+        Smart contracts auditing
+      </p>
+    </div>
+  </div>
+</div>
+
+
         {/* Button Section */}
-        <div className="flex flex-col space-y-4 mb-12 max-w-xs sm:max-w-md lg:max-w-lg xl:max-w-xl">
+        <div className="flex flex-col space-y-4 mb-10 max-w-xs sm:max-w-md lg:max-w-lg xl:max-w-xl">
           <a href="https://github.com/shola-devv" target="_blank" rel="noopener noreferrer">
             <button className="px-6 py-2 flex text-white rounded-full font-semibold bg-gradient-to-b from-blue-300/80 to-blue-600 shadow-[0_10px_15px_-2px_rgba(0,0,0,0.4)] active:translate-y-1 active:shadow-none hover:brightness-95 overflow-hidden">
               github
