@@ -73,111 +73,119 @@ const App = () => {
  
   ])
 
-
-  return (
-    <div className="min-h-screen flex flex-col justify-start items-center bg-gray-100 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 font-mono">
-      
-      {/* Header Section */}
-      <div className="text-center mb-12">
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-40">Emmanuel Shola</h1>
-        
-        {/* Descriptions */}
-        <div className="mt-4 space-y-2">
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-900 text-bold">WEB3 SOFTWARE DEVELOPER</p>
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-700">smart contracts development-Solidity</p>
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-700">Fullstack web development-Mern </p>
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-700">Smart contracts auditing</p>
-        </div>
-      </div>
-
-      {/* Button Section */}
-      <div className="flex flex-col space-y-4 mb-12 max-w-xs sm:max-w-md lg:max-w-lg xl:max-w-xl">
-      
-      <a href="https://github.com/shola-devv" target="_blank" rel="noopener noreferrer"><button className="px-6 py-2 flex text-white rounded-full font-semibold bg-gradient-to-b from-blue-300/80 to-blue-600 shadow-[0_7px_6px_-0px_rgba(0,0,0,0.25)]  active:translate-y-1  active:shadow-none hover:brightness-95  boder-white/20 border-b border-black/20 overflow-hidden"><span class="absolute inset-0 rounded-lg bg-gradient-to-b from-white/20 to-transparent pointer-events-none"></span>github   <FaGithub className="ml-2 text-2xl text-gray-700 hover:text-gray-900 transition duration-300" /></button></a>
-      <a href={`https://twitter.com/intent/follow?screen_name=${myUsername}`} target="_blank" rel="noopener noreferrer"> <button className="px-6 py-2 flex text-white rounded-full font-semibold bg-gradient-to-b from-blue-300/80 to-blue-600 shadow-[0_7px_6px_-0px_rgba(0,0,0,0.25)]  active:translate-y-1  active:shadow-none hover:brightness-95  boder-white/20 border-b border-black/20 overflow-hidden">x  <FaXTwitter className="text-2xl ml-6 text-gray-700 hover:text-grey-700 transition duration-300" /></button></a>
-      <a href="mailto:creekemmanuelf@gmail.com"> <button className="px-6 py-2 flex text-white rounded-full font-semibold bg-gradient-to-b from-blue-300/80 to-blue-600 shadow-[0_7px_6px_-0px_rgba(0,0,0,0.25)]  active:translate-y-1  active:shadow-none hover:brightness-95  boder-white/20 border-b border-black/20 overflow-hidden">Email <FaEnvelope className="text-2xl ml-2 text-gray-700 hover:text-grey-700 transition duration-300" /></button></a>
-      <a href="https://youtube.com" target="_blank" rel="noopener noreferrer"> <button className="px-6 py-2 flex text-white rounded-full font-semibold bg-gradient-to-b from-blue-300/80 to-blue-600 shadow-[0_7px_6px_-0px_rgba(0,0,0,0.25)]  active:translate-y-1  active:shadow-none hover:brightness-95  border-b border-black/20 overflow-hidden">Youtube    <FaYoutube className="ml-2 text-2xl text-gray-700 hover:text-grey-700 transition duration-300" /></button></a>
-      </div>
-
-      {/* my Projects Section */}
-      <div className="w-full max-w-screen-lg px-6">
-        <h2 className="text-3xl sm:text-3xl font-semibold text-center text-gray-800 mb-8">PROJECTS</h2>
-        
-        {/* Grid of Projects */} 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
+    return (
+      <div className="relative min-h-screen w-full overflow-hidden font-mono">
+        {/* Background Video */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+        >
+          <source src="/videos/background.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+  
+        {/* Overlay (your content) */}
+        <div className="relative flex flex-col justify-start items-center min-h-screen px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 bg-black/50">
           
-          {/* projects */}
-          {projectData.map((item) =>
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
-             <img src={item.image} alt="Project 2" className="w-full h-48 object-cover" />
-            <div className="p-4">
-              <div className="flex justify-between items-center">
-                <a href={item.githubLink} target="_blank" rel="noopener noreferrer" className="text-gray-700">
-                  <FaGithub className="text-2xl hover:text-gray-900" />
-                </a>
-                <p className='px-4'><span className='font-bold'>{item.name}</span> - a journaling web-app, it helps you safely keep your thoughts in journal form</p>
-                <a href={item.externalLink}
-                    target="_blank" rel="noopener noreferrer" className="text-gray-700">
-                  <FaExternalLinkAlt className="text-2xl hover:text-gray-900" />
-                </a>
-              </div>
+          {/* Header Section */}
+          <div className="text-center mb-12">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-40 text-white">
+              Emmanuel Shola
+            </h1>
+  
+            {/* Descriptions */}
+            <div className="mt-4 space-y-2">
+              <p className="text-lg sm:text-xl md:text-2xl text-white font-bold">
+                WEB3 SOFTWARE DEVELOPER
+              </p>
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-200">
+                smart contracts development - Solidity
+              </p>
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-200">
+                Fullstack web development - Mern
+              </p>
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-200">
+                Smart contracts auditing
+              </p>
             </div>
           </div>
-        )}
-     
-{/*Blog*/}
-     <div className="max-w-4xl mx-auto px4 py-8 font-mono">
-      <h1 className="text-3xl font-bold mb-6"><span className="underline">Blog</span>(yes, i write too)</h1>
-      <div className= "space-y-6">
-        {postData.map((post => (
-          <a key={post.id} href={post.link} className="block rounded-lg overflow-hidden bg-white shadow-md hover:shadow-lg transition-shadow duration-300 group">
-          <img src={post.src} alt={post.title} className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" />
-          <div className="p-4">
-           <h2 className ="text-lg sm:text-xl font-semibold text-gray-800 mb-2">{post.title}</h2>
-           <p className="text-sm sm:text-base text-gray-600">{post.excerpt}</p>
+  
+          {/* Button Section */}
+          <div className="flex flex-col space-y-4 mb-12 max-w-xs sm:max-w-md lg:max-w-lg xl:max-w-xl">
+            <a href="https://github.com/shola-devv" target="_blank" rel="noopener noreferrer">
+              <button className="px-6 py-2 flex text-white rounded-full font-semibold bg-gradient-to-b from-blue-300/80 to-blue-600 shadow-[0_7px_6px_-0px_rgba(0,0,0,0.25)] active:translate-y-1 active:shadow-none hover:brightness-95 border-b border-black/20 overflow-hidden">
+                github
+                <FaGithub className="ml-2 text-2xl text-gray-200 hover:text-white transition duration-300" />
+              </button>
+            </a>
+  
+            <a href={`https://twitter.com/intent/follow?screen_name=${myUsername}`} target="_blank" rel="noopener noreferrer">
+              <button className="px-6 py-2 flex text-white rounded-full font-semibold bg-gradient-to-b from-blue-300/80 to-blue-600 shadow-[0_7px_6px_-0px_rgba(0,0,0,0.25)] active:translate-y-1 active:shadow-none hover:brightness-95 border-b border-black/20 overflow-hidden">
+                x
+                <FaXTwitter className="text-2xl ml-6 text-gray-200 hover:text-white transition duration-300" />
+              </button>
+            </a>
+  
+            <a href="mailto:creekemmanuelf@gmail.com">
+              <button className="px-6 py-2 flex text-white rounded-full font-semibold bg-gradient-to-b from-blue-300/80 to-blue-600 shadow-[0_7px_6px_-0px_rgba(0,0,0,0.25)] active:translate-y-1 active:shadow-none hover:brightness-95 border-b border-black/20 overflow-hidden">
+                Email
+                <FaEnvelope className="text-2xl ml-2 text-gray-200 hover:text-white transition duration-300" />
+              </button>
+            </a>
+  
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+              <button className="px-6 py-2 flex text-white rounded-full font-semibold bg-gradient-to-b from-blue-300/80 to-blue-600 shadow-[0_7px_6px_-0px_rgba(0,0,0,0.25)] active:translate-y-1 active:shadow-none hover:brightness-95 border-b border-black/20 overflow-hidden">
+                Youtube
+                <FaYoutube className="ml-2 text-2xl text-gray-200 hover:text-white transition duration-300" />
+              </button>
+            </a>
           </div>
-          </a>
-        )))
-
-        }
-        </div> 
-
-     </div>
-        
+  
+          {/* Projects Section */}
+          <div className="w-full max-w-screen-lg px-6">
+            <h2 className="text-3xl sm:text-3xl font-semibold text-center text-white mb-8">
+              PROJECTS
+            </h2>
+  
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
+              {projectData.map((item) => (
+                <div
+                  key={item.name}
+                  className="backdrop-blur-md bg-white/20 shadow-lg rounded-lg overflow-hidden"
+                >
+                  <img src={item.image} alt={item.name} className="w-full h-48 object-cover" />
+                  <div className="p-4">
+                    <div className="flex justify-between items-center">
+                      <a href={item.githubLink} target="_blank" rel="noopener noreferrer" className="text-gray-200">
+                        <FaGithub className="text-2xl hover:text-white" />
+                      </a>
+                      <p className="px-4 text-white">
+                        <span className="font-bold">{item.name}</span> - a journaling web-app, it helps you safely keep your thoughts in journal form
+                      </p>
+                      <a href={item.externalLink} target="_blank" rel="noopener noreferrer" className="text-gray-200">
+                        <FaExternalLinkAlt className="text-2xl hover:text-white" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+  
+            {/* Green "something cool" text */}
+            <div className="text-center mt-12">
+              <p className="text-green-400 font-mono text-xl font-bold underline">
+                wanna see something cool?
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-      
-      <div className='h-32'></div>
-     <footer className="w-full text-gray-900 mt-auto">
-        
-        <div className="max-w-7xl mx-auto px-6 py-8">
-     {/* topsecion*/}
-        <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-6">
-     {/* branding */}
-     <div>
-      <h2 className= "text-xl font-bold">Shola Emmanuel</h2>
-      <a href="">
-        <p className='lg:pl-96 xl:pl-96 text-green-600 font-mono text-xl font-bold underline '> wanna see something cool?</p>
-      </a>
-     </div>
-      <nav className="flex gap-4 text-xl font-bold">
-       <a href="#about" className="hover:text-grey-600 underline transition">About</a>
-       <a href="#contact" className="hover:text-grey-600 underline transition">Contact</a>
-       <a href="#projects" className="hover:text-grey-600 underline transition">Project</a>
-       <a href="#blog" className="hover:text-grey-600 underline transition">Blog</a>
-      </nav>
-        </div>
-      /""
-      </div>
-      <div className="border-t-4  border-gray-700 my-6 text-xl font-bold">
-       <div> &copy;{year} Shola Emmanuel. All rights reserved(lol)</div>
-      </div>
-     </footer>
-    </div>
-  );
-};
-/
-
+    );
+         
+}
 export default App;
 
 
