@@ -29,22 +29,28 @@ const projects = [
 name: "Cryptosnoop",
 desc: "Cryptosnoop - a crypto portfolio and tracker web-app, keeps track of the live statistics and prices of selected crtptocurrencies.",
 link: "https://crypto-snoop-v2.vercel.app",
+code: "https://github.com/shola-devv/cryptoSnoop"
 },
+
 {
-name: "Journals2me",
-desc: "a journaling web-app, it helps you safely keep your thoughts in journal form",
-link: "https://journals2me.vercel.app",
+name: "NFT powered onchain DAO ",
+desc: "A NFT powered fully on chain DAO to invest in NFT collections as a group",
+link: "https://github.com/shola-devv/NFT-powered-onchain-DAO-",
+code:"https://github.com/shola-devv/NFT-powered-onchain-DAO-"
 },
+
 {
 name: "Web3 landing pages",
-desc: "a collection of web3 themed landing pages deployed on the blockchain - modern, responsive, and built to showcase decentralized aps, Nft projects and blockchain startups ",
-link: "",
+desc: "A collection of web3 themed landing pages deployed on the blockchain - modern, responsive, and built to showcase decentralized aps, Nft projects and blockchain startups ",
+link: "https://github.com/shola-devv/Web3LandingPages",
+code:"https://github.com/shola-devv/Web3LandingPages"
 },
 //add cryptosnoop, landing pages, Nft with a whitelist, j2m3(change wheen you make a new one)
 {
 name: "Privimigration",
-desc: "a social media web-app where people can share their journey plans, get advice and give advice on imigration",
+desc: "A social media web-app where people can share their journey plans, get advice and give advice on imigration",
 link: "https://privimigration.vercel.app",
+code:"https://github.com/shola-devv/PRIVIMIGRATION"
 },
 ];
 
@@ -102,9 +108,17 @@ Hello, I'm Shola Emmanuel Fayinminu </h1>
           className="p-6 rounded-2xl shadow-lg border bg-white flex flex-col justify-between"
         >
           <div>
-            <h3 className="text-xl font-bold text-black-">
+           <div className="flex justify-between items-center">
+             <h3 className="text-xl font-bold text-black-">
               {project.name}
             </h3>
+            <a
+             href={project.code}
+             className= " text-black underline">
+              code
+                 </a>
+           </div>
+           
             <p className="text-gray-600 mt-2">{project.desc}</p>
           </div>
           <a
