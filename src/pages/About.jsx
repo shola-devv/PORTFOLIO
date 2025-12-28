@@ -20,7 +20,7 @@ const skills = [
 { name: "ethersjs", color: "bg-purple-100", icon: "" },
 { name: "Git", color: "bg-purple-100", icon: "" },
 { name: "MongoDB", color: "bg-purple-100", icon: "" },
-{ name: "Truffle", color: "bg-purple-100", icon: "" },
+{ name: "wagmi", color: "bg-purple-100", icon: "" },
 { name: "viem", color: "bg-purple-100", icon: "" },
 ];
 
@@ -37,13 +37,14 @@ link: "https://journals2me.vercel.app",
 },
 {
 name: "Web3 landing pages",
-desc: "a collection of web3 themed landing pages - modern, responsive, and built to showcase decentralized aps, Nft projects and blockchain startups ",
-link: "https://privimigration.vercel.app",
+desc: "a collection of web3 themed landing pages deployed on the blockchain - modern, responsive, and built to showcase decentralized aps, Nft projects and blockchain startups ",
+link: "",
 },
+//add cryptosnoop, landing pages, Nft with a whitelist, j2m3(change wheen you make a new one)
 {
 name: "Privimigration",
 desc: "a social media web-app where people can share their journey plans, get advice and give advice on imigration",
-link: "",
+link: "https://privimigration.vercel.app",
 },
 ];
 
