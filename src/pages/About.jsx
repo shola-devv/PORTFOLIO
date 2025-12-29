@@ -42,7 +42,7 @@ code:"https://github.com/shola-devv/NFT-powered-onchain-DAO-"
 {
 name: "Web3 landing pages",
 desc: "A collection of web3 themed landing pages deployed on the blockchain - modern, responsive, and built to showcase decentralized aps, Nft projects and blockchain startups ",
-link: "https://github.com/shola-devv/Web3LandingPages",
+link: "https://web3-landing-pages-nkshxuosn-emmanuel-s-projects-5c6a2d82.vercel.app/",
 code:"https://github.com/shola-devv/Web3LandingPages"
 },
 //add cryptosnoop, landing pages, Nft with a whitelist, j2m3(change wheen you make a new one)
