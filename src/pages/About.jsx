@@ -28,7 +28,7 @@ const projects = [
 {
 name: "Cryptosnoop",
 desc: "Cryptosnoop - a crypto portfolio and tracker web-app, keeps track of the live statistics and prices of selected crtptocurrencies.",
-link: "https://crypto-snoop-v2.vercel.app",
+link: "https://cryptosnoop.app",
 code: "https://github.com/shola-devv/cryptoSnoop"
 },
 
