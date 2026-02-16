@@ -33,6 +33,20 @@ code: "https://github.com/shola-devv/cryptoSnoop"
 },
 
 {
+name: "Distributed-newsletter-email-delivery-with-kafka",
+desc: "A distributed system that sends out newsletter notifications and newsletter itself to selected emails using nodejs and Kafka cloud achitecture",
+link: "https://github.com/shola-devv/Distributed-newsletter-email-delivery-with-kafka",
+code: "https://github.com/shola-devv/Distributed-newsletter-email-delivery-with-kafka",
+},
+
+{
+name: "Smart gas gauge ",
+desc: "mart Contract Gauge AI analyzes smart contract complexity to estimate gas costs across major EVM chains and delivers AI-generated, actionable optimization suggestions to help developers ship more efficient smart contracts.",
+link: "https://github.com/shola-devv/SmartContractsGauge-AI",
+code:"https://github.com/shola-devv/SmartContractsGauge-AI"
+},
+
+{
 name: "NFT powered onchain DAO ",
 desc: "A NFT powered fully on chain DAO to invest in NFT collections as a group",
 link: "https://github.com/shola-devv/NFT-powered-onchain-DAO-",
