@@ -1,12 +1,10 @@
 import React from 'react';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'; // You can use icons from 'react-icons'
-import { FaTwitter, FaEnvelope, FaYoutube, FaUser } from 'react-icons/fa';
+import { FaGithub, FaEnvelope, FaUser } from 'react-icons/fa';
 import { FaXTwitter } from "react-icons/fa6";
-import { useState } from 'react';
 import { useNavigate } from "react-router-dom"
 
 const App = () => {
-  const year = useState(new Date().getFullYear());
+  
    const myUsername = "0xfemmanuel"  // without @ ... "https://x.com/0xfeMMANUEL" ['◽ Smart contracts development - solidity', '◽   Fullstack web3 development - MERN', '◽ Smart contracts auditing']
    const roles = ['◽ builds fullstack web3 apps -MERN', '◽ writes and audits smart contracts -Solidity', '◽ writes about tech too ']
 const navigate = useNavigate();
@@ -17,71 +15,7 @@ const buzzClick = () => {
     console.log("Vibration api is not supported on this device.")
    }
 }
-   const [projectData, setprojectData ] = useState([
-    {
-      project: 1,
-      name : "cryptoSnoop",
-      image : "./rypto1.png",
-      story: "Cryptosnoop - a crypto portfolio and tracker web-app, keeps track of the live statistics and prices of selected crtptocurrencies",
-      githubLink : "https://github.com/shola-devv",
-      externalLink : "https://crypto-snoop-v2.vercel.app",
-
-    },
-    { 
-      project: 2,
-      name : "Privimigration",
-      image : "./journals2.png",
-      story: "a journaling web-app, it helps you safely keep your thoughts in journal form",
-      githubLink : "https://github.com/shola-devv",
-      externalLink : "https://journals2me.vercel.app",
-},
-{ 
-  project: 3,
-  name : "privimigration",
-  image : "./privi.png",
-  story: "a social media web-app where people can share their journey plans, get advice and give advice on imigration",
-  githubLink : "https://github.com/shola-devv",
-  externalLink : "https://privimigration.vercel.app",
-},
-/*
-{ 
-  project: 4,
-  name : "cryptoSnoop",
-  image : "./rypto1.png",
-  story: "Cryptosnoop - a crypto portfolio and tracker web-app, keeps track of the live statistics and prices of selected crtptocurrencies",
-  githubLink : "https://github.com/shola-devv",
-  externalLink : "https://crypto-snoop-v2.vercel.app",
-},
-{ 
-  project: 5,
-  name : "cryptoSnoop",
-  image : "./rypto1.png",
-  story: "Cryptosnoop - a crypto portfolio and tracker web-app, keeps track of the live statistics and prices of selected crtptocurrencies",
-  githubLink : "https://github.com/shola-devv",
-  externalLink : "https://crypto-snoop-v2.vercel.app",
-}
-  */,
-   ])
-
-   const [postData, setpostData ] = useState([
-    {
-      id: 1,
-      title : "git and github",
-      excerpt: "how does git and github works",
-      image:"",
-      externalLink : "https://crypto-snoop-v2.vercel.app",
-
-    },
-    { 
-      id: 1,
-      title : "git and github",
-      excerpt: "how does git and github works",
-      image:"",
-      externalLink : "https://crypto-snoop-v2.vercel.app",
-    
-},
- 
-  ])
+   
 
   return (
     <div className="relative min-h-screen w-full overflow-hidden font-mono">

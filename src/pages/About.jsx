@@ -1,6 +1,5 @@
 import React from "react";
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'; // You can use icons from 'react-icons'
-import { FaTwitter, FaEnvelope, FaYoutube, FaUser } from 'react-icons/fa';
+import { FaGithub, FaEnvelope } from 'react-icons/fa';
 import { FaXTwitter } from "react-icons/fa6";
 
 const Portfolio = () => {
