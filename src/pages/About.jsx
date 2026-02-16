@@ -41,7 +41,7 @@ code: "https://github.com/shola-devv/Distributed-newsletter-email-delivery-with-
 
 {
 name: "Smart gas gauge ",
-desc: "mart Contract Gauge AI analyzes smart contract complexity to estimate gas costs across major EVM chains and delivers AI-generated, actionable optimization suggestions to help developers ship more efficient smart contracts.",
+desc: "Smart Contract Gauge AI analyzes smart contract complexity to estimate gas costs across major EVM chains and delivers AI-generated, actionable optimization suggestions to help developers ship more efficient smart contracts.",
 link: "https://github.com/shola-devv/SmartContractsGauge-AI",
 code:"https://github.com/shola-devv/SmartContractsGauge-AI"
 },
