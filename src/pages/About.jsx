@@ -15,6 +15,7 @@ const skills = [
 { name: "Next.js", color: "bg-purple-100", icon: "⬛" },
 { name: "Node.js", color: "bg-purple-100", icon: "🟩" },
 { name: "Express.js", color: "bg-purple-100", icon: "📦" },
+{ name: "Kafka", color: "bg-purple-100", icon: "📦" },
 { name: "Foundry", color: "bg-purple-100", icon: "" },
 { name: "Remix", color: "bg-purple-100", icon: "" },
 { name: "ethersjs", color: "bg-purple-100", icon: "" },
