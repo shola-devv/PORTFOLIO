@@ -27,7 +27,7 @@ const skills = [
 const projects = [
 {
 name: "Cryptosnoop",
-desc: "Cryptosnoop - a crypto portfolio and tracker web-app, keeps track of the live statistics and prices of selected crtptocurrencies.",
+desc: "CryptoSnoop is an all-in-one platform designed to track cryptocurrency portfolios and monitor remote wallets across multiple blockchains in real-time. It functions as a comprehensive tool for portfolio management and on-chain analysis.",
 link: "https://cryptosnoop.app",
 code: "https://github.com/shola-devv/cryptoSnoop"
 },
