@@ -1,12 +1,12 @@
 import React from 'react';
-import { FaGithub, FaEnvelope, FaUser } from 'react-icons/fa';
+import { FaGithub, FaEnvelope, FaUser, FaMediumM } from 'react-icons/fa';
 import { FaXTwitter } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom"
 
 const App = () => {
   
    const myUsername = "0xfemmanuel"  // without @ ... "https://x.com/0xfeMMANUEL" ['◽ Smart contracts development - solidity', '◽   Fullstack web3 development - MERN', '◽ Smart contracts auditing']
-   const roles = ['◽ builds fullstack web3 apps -MERN', '◽ writes and audits smart contracts -Solidity', '◽ writes about tech too ']
+   const roles = ['◽ builds fullstack web3 apps -MERN', '◽ writes and audits smart contracts -Solidity', '◽ writes about tech ']
 const navigate = useNavigate();
 const buzzClick = () => {
    if(navigator.vibrate) {
@@ -55,37 +55,45 @@ const buzzClick = () => {
 </div>
 
 
-        {/* Button Section */}
-        <div className="flex flex-col space-y-4 mb-8 max-w-xs sm:max-w-md lg:max-w-lg xl:max-w-xl">
-          <a href="https://github.com/shola-devv" target="_blank" rel="noopener noreferrer">
-            <button onClick={()=>{buzzClick();}} className="px-6 py-2 flex text-white rounded-full font-semibold bg-gradient-to-b from-blue-300/80 to-blue-600 shadow-[0_10px_15px_-2px_rgba(0,0,0,0.4)] active:translate-y-1 active:shadow-none hover:brightness-95 overflow-hidden">
-              Github
-              <FaGithub className="ml-2 text-2xl text-gray-200 hover:text-white transition duration-300" />
-            </button>
-          </a>
-  
-          <a href={`https://twitter.com/intent/follow?screen_name=${myUsername}`} target="_blank" rel="noopener noreferrer">
-            <button onClick={()=>{buzzClick();}} className="px-6 py-2 flex text-white rounded-full font-semibold bg-gradient-to-b from-blue-300/80 to-blue-600 shadow-[0_10px_15px_-2px_rgba(0,0,0,0.4)] active:translate-y-1 active:shadow-none hover:brightness-95 overflow-hidden">
-            X
-              <FaXTwitter className="text-2xl ml-6 text-gray-200 hover:text-white transition duration-300" />
-           
-            </button>
-          </a>
-  
-          <a href="mailto:creekemmanuelf@gmail.com">
-            <button onClick={()=>{buzzClick();}} className="px-6 py-2 flex text-white rounded-full font-semibold bg-gradient-to-b from-blue-300/80 to-blue-600 shadow-[0_10px_15px_-2px_rgba(0,0,0,0.4)] active:translate-y-1 active:shadow-none hover:brightness-95 overflow-hidden">
-            Email
-            <FaEnvelope className="text-2xl ml-6 text-gray-200 hover:text-white transition duration-300" /> 
-            </button>
-          </a>
-  
-          
-            <button onClick={()=> {navigate("/About"); buzzClick();}} className="px-6 py-2 flex text-white rounded-full font-semibold bg-gradient-to-b from-blue-300/80 to-blue-600 shadow-[0_10px_15px_-2px_rgba(0,0,0,0.4)] active:translate-y-1 active:shadow-none hover:brightness-95 overflow-hidden">
-              Aboutme
-              <FaUser className="ml-2 text-2xl text-gray-200 hover:text-white transition duration-300" />
-            </button>
-          
-        </div>
+      <div className="flex flex-col items-center space-y-4 mb-8 max-w-xs sm:max-w-md lg:max-w-lg xl:max-w-xl">
+ 
+  <button
+    onClick={()=> {navigate("/About"); buzzClick();}}
+    className="w-full px-6 py-2 flex justify-center items-center text-white rounded-full font-semibold bg-gradient-to-b from-blue-300/80 to-blue-600 shadow-[0_10px_15px_-2px_rgba(0,0,0,0.4)] active:translate-y-1 active:shadow-none hover:brightness-95 overflow-hidden"
+  >
+    Aboutme
+    <FaUser className="ml-2 text-2xl text-gray-200 hover:text-white transition duration-300" />
+  </button>
+
+  <a href="https://github.com/shola-devv" target="_blank" rel="noopener noreferrer" className="w-full">
+    <button className="w-full px-6 py-2 flex justify-center items-center text-white rounded-full font-semibold bg-gradient-to-b from-blue-300/80 to-blue-600 shadow-[0_10px_15px_-2px_rgba(0,0,0,0.4)] active:translate-y-1 active:shadow-none hover:brightness-95 overflow-hidden">
+      Github
+      <FaGithub className="ml-2 text-2xl text-gray-200 hover:text-white transition duration-300" />
+    </button>
+  </a>
+
+  <a href={`https://twitter.com/intent/follow?screen_name=${myUsername}`} target="_blank" rel="noopener noreferrer" className="w-full">
+    <button className="w-full px-6 py-2 flex justify-center items-center text-white rounded-full font-semibold bg-gradient-to-b from-blue-300/80 to-blue-600 shadow-[0_10px_15px_-2px_rgba(0,0,0,0.4)] active:translate-y-1 active:shadow-none hover:brightness-95 overflow-hidden">
+      X
+      <FaXTwitter className="ml-2 text-2xl text-gray-200 hover:text-white transition duration-300" />
+    </button>
+  </a>
+
+  <a href="mailto:creekemmanuelf@gmail.com" className="w-full">
+    <button className="w-full px-6 py-2 flex justify-center items-center text-white rounded-full font-semibold bg-gradient-to-b from-blue-300/80 to-blue-600 shadow-[0_10px_15px_-2px_rgba(0,0,0,0.4)] active:translate-y-1 active:shadow-none hover:brightness-95 overflow-hidden">
+      Email
+      <FaEnvelope className="ml-2 text-2xl text-gray-200 hover:text-white transition duration-300" /> 
+    </button>
+  </a>
+
+  <a href="https://medium.com/@olusholaemmanuelfayinminu" target="_blank" rel="noopener noreferrer" className="w-full">
+    <button className="w-full px-6 py-2 flex justify-center items-center text-white rounded-full font-semibold bg-gradient-to-b from-blue-300/80 to-blue-600 shadow-[0_10px_15px_-2px_rgba(0,0,0,0.4)] active:translate-y-1 active:shadow-none hover:brightness-95 overflow-hidden">
+      Medium
+      <FaMediumM className="ml-2 text-2xl text-gray-200 hover:text-white transition duration-300" />
+    </button>
+  </a>
+
+</div>
   
         {/* Projects Section 
         <div className="w-full max-w-screen-lg px-6">

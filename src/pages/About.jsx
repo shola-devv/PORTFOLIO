@@ -29,42 +29,58 @@ const projects = [
 name: "Cryptosnoop",
 desc: "CryptoSnoop is an all-in-one platform designed to track cryptocurrency portfolios and monitor remote wallets across multiple blockchains in real-time. It functions as a comprehensive tool for portfolio management and on-chain analysis.",
 link: "https://cryptosnoop.app",
-code: "https://github.com/shola-devv/cryptoSnoop"
-},
-
-{
-name: "Distributed-newsletter-email-delivery-with-kafka",
-desc: "A distributed system that sends out newsletter notifications and newsletter itself to selected emails using nodejs and Kafka cloud achitecture",
-link: "https://github.com/shola-devv/Distributed-newsletter-email-delivery-with-kafka",
-code: "https://github.com/shola-devv/Distributed-newsletter-email-delivery-with-kafka",
+code: "https://github.com/shola-devv/cryptoSnoop",
+stack: [ "Next.js(typescript)", "Node.js", "Express", "MongoDB", "ethersjs", "wagmi", "viem", "solidity"],
 },
 
 {
 name: "Smart gas gauge ",
 desc: "Smart Contract Gauge AI analyzes smart contract complexity to estimate gas costs across major EVM chains and delivers AI-generated, actionable optimization suggestions to help developers ship more efficient smart contracts.",
 link: "https://github.com/shola-devv/SmartContractsGauge-AI",
-code:"https://github.com/shola-devv/SmartContractsGauge-AI"
+code:"https://github.com/shola-devv/SmartContractsGauge-AI",
+stack: ["Next.js(typescript)", "Node.js", "Express", "MongoDB", "solidity"]
 },
 
 {
 name: "NFT powered onchain DAO ",
-desc: "A NFT powered fully on chain DAO to invest in NFT collections as a group",
+desc: "A NFT powered fully on chain DAO to invest in NFT collections as a group, built with solidity, foundry and reactn Nextjs. ",
 link: "https://github.com/shola-devv/NFT-powered-onchain-DAO-",
-code:"https://github.com/shola-devv/NFT-powered-onchain-DAO-"
+code:"https://github.com/shola-devv/NFT-powered-onchain-DAO-",
+stack: ["solidity", "foundry", "remix", "viem", "Next.js(typescript)", "Node.js", "Express", "MongoDB" ]
 },
+
+{
+name: "SendMeFunds",
+desc: "A full-stack fintech wallet system with ACID transactions, double-entry ledger, idempotency, and role-based access control",
+link: "https://github.com/shola-devv/sendMeFunds-Frontend.git",
+code: "https://github.com/shola-devv/SendMeFunds-Fintech-model-.git",
+stack: ["Node.js", "nextjs", "TypeScript", "Express", "MongoDB", "sequelise", "PostgreSQL"]
+},
+
+
+{
+name: "Distributed-newsletter-email-delivery-with-kafka",
+desc: "A distributed system that sends out newsletter notifications and newsletter itself to selected emails using nodejs and Kafka cloud achitecture",
+link: "https://github.com/shola-devv/Distributed-newsletter-email-delivery-with-kafka",
+code: "https://github.com/shola-devv/Distributed-newsletter-email-delivery-with-kafka",
+stack: ["Node.js", "Kafka",  "Express", "MongoDB", "docker",] 
+},
+
 
 {
 name: "Web3 landing pages",
 desc: "A collection of web3 themed landing pages deployed on the blockchain - modern, responsive, and built to showcase decentralized aps, Nft projects and blockchain startups ",
 link: "https://web3-landing-pages-nkshxuosn-emmanuel-s-projects-5c6a2d82.vercel.app/",
-code:"https://github.com/shola-devv/Web3LandingPages"
+code:"https://github.com/shola-devv/Web3LandingPages",
+stack: ["Next.js(typescript)", "Node.js", "Express", "MongoDB", "solidity", "viem", "ethers"]
 },
 //add cryptosnoop, landing pages, Nft with a whitelist, j2m3(change wheen you make a new one)
 {
 name: "Privimigration",
 desc: "A social media web-app where people can share their journey plans, get advice and give advice on imigration",
 link: "https://privimigration.vercel.app",
-code:"https://github.com/shola-devv/PRIVIMIGRATION"
+code:"https://github.com/shola-devv/PRIVIMIGRATION",
+stack: ["Next.js(javascript)", "Node.js",  ]
 },
 ];
 
@@ -135,12 +151,22 @@ Hello, I'm Shola Emmanuel Fayinminu </h1>
            
             <p className="text-gray-600 mt-2">{project.desc}</p>
           </div>
+
+           <div>
+            <p className="text-sm text-gray-600 mt-2">
+              <span className="font-bold">Built with :</span> {project.stack.join(", ")}
+            </p>
+          </div>
+
           <a
             href={project.link}
             className="mt-4 inline-block text-center bg-black text-white px-4 py-2 rounded-lg hover:bg-black-700 transition"
           >
             View Project
           </a>
+         
+            
+
         </div>
       ))}
         
