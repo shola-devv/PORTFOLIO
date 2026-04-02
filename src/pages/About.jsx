@@ -36,7 +36,7 @@ stack: [ "Next.js(typescript)", "Node.js", "Express", "MongoDB", "ethersjs", "wa
 {
 name: "Smart gas gauge ",
 desc: "Smart Contract Gauge AI analyzes smart contract complexity to estimate gas costs across major EVM chains and delivers AI-generated, actionable optimization suggestions to help developers ship more efficient smart contracts.",
-link: "https://github.com/shola-devv/SmartContractsGauge-AI",
+link: "https://smart-contracts-gauge-u2xi2nb1c-emmanuel-s-projects-5c6a2d82.vercel.app",
 code:"https://github.com/shola-devv/SmartContractsGauge-AI",
 stack: ["Next.js(typescript)", "Node.js", "Express", "MongoDB", "solidity"]
 },
