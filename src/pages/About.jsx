@@ -3,7 +3,7 @@ import { FaGithub, FaEnvelope } from 'react-icons/fa';
 import { FaXTwitter } from "react-icons/fa6";
 
 const Portfolio = () => {
-  const myUsername = "0xfemmanuel"  // without @ ... "https://x.com/0xfeMMANUEL"
+  const myUsername = "0xfemmanuel"; // without @ ... "https://x.com/0xfeMMANUEL"
 const skills = [
 { name: "HTML", color: "bg-purple-100", icon: "🌐" },
 { name: "CSS", color: "bg-purple-100", icon: "🎨" },
