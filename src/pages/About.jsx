@@ -1,27 +1,11 @@
-import React from "react";
-import { FaGithub, FaEnvelope } from 'react-icons/fa';
-import { FaXTwitter } from "react-icons/fa6";
+import React, { useEffect, useRef } from "react";
 
-const Portfolio = () => {
-  const myUsername = "0xfemmanuel"; // without @ ... "https://x.com/0xfeMMANUEL"
+const myUsername = "0xfemmanuel";
+
 const skills = [
-{ name: "HTML", color: "bg-purple-100", icon: "🌐" },
-{ name: "CSS", color: "bg-purple-100", icon: "🎨" },
-{ name: "JavaScript", color: "bg-purple-100", icon: "🟨" },
-{ name: "TypeScript", color: "bg-purple-100", icon: "🔵" },
-{ name: "Solidity", color: "bg-purple-100", icon: "" },
-{ name: "React", color: "bg-purple-100", icon: "⚛️" },
-{ name: "Next.js", color: "bg-purple-100", icon: "⬛" },
-{ name: "Node.js", color: "bg-purple-100", icon: "🟩" },
-{ name: "Express.js", color: "bg-purple-100", icon: "📦" },
-{ name: "Kafka", color: "bg-purple-100", icon: "📦" },
-{ name: "Foundry", color: "bg-purple-100", icon: "" },
-{ name: "Remix", color: "bg-purple-100", icon: "" },
-{ name: "ethersjs", color: "bg-purple-100", icon: "" },
-{ name: "Git", color: "bg-purple-100", icon: "" },
-{ name: "MongoDB", color: "bg-purple-100", icon: "" },
-{ name: "wagmi", color: "bg-purple-100", icon: "" },
-{ name: "viem", color: "bg-purple-100", icon: "" },
+  "HTML", "CSS", "JavaScript", "TypeScript", "Solidity",
+  "React", "Next.js", "Node.js", "Express.js", "Kafka",
+  "Foundry", "Remix", "ethers.js", "Git", "MongoDB", "wagmi", "viem",
 ];
 
 const projects = [
@@ -84,110 +68,181 @@ stack: ["Next.js(javascript)", "Node.js",  ]
 },
 ];
 
-return ( <div className="max-w-5xl mx-auto px-4 py-10 space-y-16">
-{/* About Me */} <section className="text-center"> <img
-       src="/mypic.jpeg"
-       alt="Profile"
-       className="w-40 h-40 mx-auto rounded-full shadow-lg"
-     /> <h1 className="text-3xl md:text-4xl font-bold mt-6">
-Hello, I'm Shola Emmanuel Fayinminu </h1>
- <p className="text-gray-700 mt-4 max-w-2xl mx-auto leading-relaxed">
-    I'm a{" "}
-    <span className="text-black">web3 </span>
-     software developer {" "}
-    with a strong{" "}
-    <span className="text-black">
-      interest in the future of decentralized technology.
-    </span>
-  </p>
 
-  <p className="text-gray-700 mt-4 max-w-2xl mx-auto leading-relaxed">
-    I'm strongly interested in the{" "}
-    <span className="text-black">gamification of web3</span> and passionate
-    about{" "}
-    <span className="text-black">
-      building software that feels forward-looking
-    {" "}
-    - my work and portfolio reflects just that.
-    </span>
-  </p>
-</section>
+function usePlusGrid(fieldRef, svgRef) {
+  useEffect(() => {
+    function draw() {
+      const field = fieldRef.current;
+      const svg = svgRef.current;
+      if (!field || !svg) return;
 
-  {/* My Skills */}
-  <section>
-    <h2 className="text-2xl font-bold text-center mb-8">My Skills</h2>
-    <div className="flex flex-wrap justify-center gap-4">
-      {skills.map((skill, i) => (
-        <span
-          key={i}
-          className="px-4 py-2 rounded-xl bg-black backdrop-blur-md text-white font-medium shadow-sm"
-        >
-           {skill.name}
-        </span>
-      ))}
-    </div>
-  </section>
+      const W = field.offsetWidth;
+      const H = field.offsetHeight;
+      svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+      svg.setAttribute("width", W);
+      svg.setAttribute("height", H);
 
-  {/* Projects */}
-  <section>
-    <h2 className="text-2xl font-bold text-center mb-8">Projects</h2>
-    <div className="grid gap-6 sm:grid-cols-2">
-      {projects.map((project, i) => (
-        <div
-          key={i}
-          className="p-6 rounded-2xl shadow-lg border bg-white flex flex-col justify-between"
-        >
-          <div>
-           <div className="flex justify-between items-center">
-             <h3 className="text-xl font-bold text-black-">
-              {project.name}
-            </h3>
-            <a
-             href={project.code}
-             className= " text-black underline">
-              code
-                 </a>
-           </div>
-           
-            <p className="text-gray-600 mt-2">{project.desc}</p>
+      const spacing = 38;
+      const arm = 9;
+      const cols = Math.ceil(W / spacing) + 1;
+      const rows = Math.ceil(H / spacing) + 1;
+
+      let html = "";
+      for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < cols; c++) {
+          const x = c * spacing;
+          const y = r * spacing;
+          const isOrange = (r * cols + c) % 7 === 3 || (r + c) % 11 === 5;
+          const color = isOrange ? "#E07B3A" : "#d0cec8";
+          const sw = isOrange ? 1.8 : 1;
+          html += `<line x1="${x}" y1="${y - arm}" x2="${x}" y2="${y + arm}" stroke="${color}" stroke-width="${sw}"/>`;
+          html += `<line x1="${x - arm}" y1="${y}" x2="${x + arm}" y2="${y}" stroke="${color}" stroke-width="${sw}"/>`;
+        }
+      }
+      svg.innerHTML = html;
+    }
+
+    const timer = setTimeout(draw, 80);
+    window.addEventListener("resize", draw);
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("resize", draw);
+    };
+  }, [fieldRef, svgRef]);
+}
+
+const Portfolio = () => {
+  const fieldRef = useRef(null);
+  const svgRef = useRef(null);
+  usePlusGrid(fieldRef, svgRef);
+
+  return (
+    <div className="max-w-2xl mx-auto px-4 sm:px-6 py-10 sm:py-16 font-mono">
+
+      {/* ── About ── */}
+      <section className="mb-14 sm:mb-20">
+        {/*
+          Uncomment when profile photo is available:
+          <img
+            src="/mypic.jpeg"
+            alt="Shola Emmanuel Fayinminu"
+            className="w-20 h-20 rounded-full mb-5 block"
+          />
+        */}
+        <h1 className="text-xl sm:text-2xl font-normal text-neutral-900 leading-snug mb-4">
+          Shola Emmanuel<br />Fayinminu
+        </h1>
+        <p className="text-[13px] text-neutral-400 tracking-widest mb-5">
+          Web3 software developer
+        </p>
+        <p className="text-sm text-neutral-500 leading-relaxed mb-3">
+          I'm a web3 software developer with a
+          strong interest in the future of decentralized technology. I build full-stack web3 applications using the MERN and PERN stacks, write Solidity smart contracts, and handle on-chain interactions with viem and ethers.js.
+        </p>
+         
+        <p className="text-sm text-neutral-500 leading-relaxed">
+          I'm strongly interested in the gamification of web3 and
+          passionate about building software that feels{" "}
+          <span className="text-[#E07B3A]">forward-looking </span>
+        - My work and portfolio reflects just that.
+        </p>
+      </section>
+
+      {/* ── Skills ── */}
+      <section className="mb-14 sm:mb-20">
+        <p className="text-[11px] uppercase tracking-widest text-neutral-300 mb-6">Skills</p>
+        <div ref={fieldRef} className="relative overflow-hidden min-h-44 sm:min-h-56 p-6 sm:p-12">
+          <svg
+            ref={svgRef}
+            className="absolute inset-0 w-full h-full"
+            xmlns="http://www.w3.org/2000/svg"
+          />
+          <div className="relative z-10 flex flex-wrap gap-x-5 gap-y-3">
+            {skills.map((skill) => (
+              <span
+                key={skill}
+                className="text-[13px] text-neutral-900 leading-relaxed tracking-wide"
+                style={{ background: "rgba(255, 255, 255, 1)", padding: "2px 0" }}
+              >
+                {skill}
+              </span>
+            ))}
           </div>
+        </div>
+      </section>
 
-           <div>
-            <p className="text-sm text-gray-600 mt-2">
-              <span className="font-bold">Built with :</span> {project.stack.join(", ")}
+      {/* ── Projects ── */}
+      <section className="mb-14 sm:mb-20">
+        <p className="text-[11px] uppercase tracking-widest text-neutral-300 mb-6">Projects</p>
+        {projects.map((project, i) => (
+          <div
+            key={project.name}
+            className="py-7"
+          >
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 sm:gap-0 mb-2">
+              <span className="text-[15px] font-normal text-neutral-900">
+                {project.name}
+              </span>
+              <div className="flex gap-4">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-[#E07B3A] underline tracking-wider"
+                >
+                  live ↗
+                </a>
+                <a
+                  href={project.code}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-[#E07B3A] underline tracking-wider"
+                >
+                  code ↗
+                </a>
+              </div>
+            </div>
+            <p className="text-[13px] text-neutral-500 leading-relaxed mb-2">
+              {project.desc}
+            </p>
+            <p className="text-[11px] text-[#E07B3A] leading-relaxed tracking-wide">
+              {project.stack.join(" · ")}
             </p>
           </div>
+        ))}
+      </section>
 
-          <a
-            href={project.link}
-            className="mt-4 inline-block text-center bg-black text-white px-4 py-2 rounded-lg hover:bg-black-700 transition"
-          >
-            View Project
-          </a>
-         
-            
-
-        </div>
-      ))}
+      {/* ── Footer ── */}
+      <div
+        className="flex gap-6 pt-10 sm:pt-12 "
         
+      >
+        <a
+          href={`https://twitter.com/intent/follow?screen_name=${myUsername}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xs text-[#E07B3A] underline tracking-widest"
+        >
+          X / Twitter ↗
+        </a>
+        <a
+          href="https://github.com/shola-devv"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xs text-[#E07B3A] underline tracking-widest"
+        >
+          GitHub ↗
+        </a>
+        <a
+          href="mailto:creekemmanuelf@gmail.com"
+          className="text-xs text-[#E07B3A] underline tracking-widest"
+        >
+          Email ↗
+        </a>
+      </div>
+
     </div>
-  </section>
-  <div className="mt-4 flex justify-center space-x-1">
-  <a href={`https://twitter.com/intent/follow?screen_name=${myUsername}`} target="_blank" rel="noopener noreferrer">
-    <FaXTwitter className="ml-2 text-2xl text-black hover:text-gray-700 transition duration-300 shadow-lg active:translate-x-2" />
-  </a>
-  <a href="https://github.com/shola-devv" target="_blank" rel="noopener noreferrer">
-    <FaGithub className="ml-2 text-2xl text-black hover:text-gray-700 transition duration-300 shadow-lg active:translate-x-2" />
-  </a>
-  <a href="mailto:creekemmanuelf@gmail.com" target="_blank" rel="noopener noreferrer">
-    <FaEnvelope className="ml-2 text-2xl text-black hover:text-gray-700 transition duration-300 shadow-lg active:translate-x-2" />
-  </a>
-</div>
-
-</div>
-
-
-);
+  );
 };
 
 export default Portfolio;
