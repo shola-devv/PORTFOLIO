@@ -239,6 +239,13 @@ const Portfolio = () => {
         >
           Email ↗
         </a>
+
+         <a
+          href="https://medium.com/@olusholaemmanuelfayinminu"
+          className="text-xs text-[#E07B3A] underline tracking-widest"
+        >
+          Medium ↗
+        </a>
       </div>
 
     </div>
