@@ -26,11 +26,19 @@ stack: ["Next.js(typescript)", "Node.js", "Express", "MongoDB", "solidity"]
 },
 
 {
-name: "NFT powered onchain DAO ",
+name: "NFT powered onchain DAO",
 desc: "A NFT powered fully on chain DAO to invest in NFT collections as a group, built with solidity, foundry and reactn Nextjs. ",
 link: "https://github.com/shola-devv/NFT-powered-onchain-DAO-",
 code:"https://github.com/shola-devv/NFT-powered-onchain-DAO-",
 stack: ["solidity", "foundry", "remix", "viem", "Next.js(typescript)", "Node.js", "Express", "MongoDB" ]
+},
+
+{
+  name: "HelpSwap",
+  desc: "An Automated Market Maker (AMM) decentralized exchange inspired by Uniswap V1",
+  link: "https://github.com/shola-devv/HelpSwap.git",
+  code: "https://github.com/shola-devv/HelpSwap.git",
+  stack: ["Solidity", "Foundry", "remix", "OpenZeppelin", "Sepolia"]
 },
 
 {
