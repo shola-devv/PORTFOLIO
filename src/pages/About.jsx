@@ -34,6 +34,14 @@ stack: ["solidity", "foundry", "remix", "viem", "Next.js(typescript)", "Node.js"
 },
 
 {
+name: "SNOOP NFT collection",
+desc: "A collection of 10 unique SNOOP NFTs, each with distinct traits and attributes, built with solidity, foundry and Nextjs. ",
+link: "https://snoop-nft-webapp.vercel.app",
+code:"https://github.com/shola-devv/snoopNFT-webapp.git",
+stack: ["solidity", "foundry", "remix", "viem", "wagmi", "Next.js(typescript)", "Node.js", "Express", "MongoDB", ]
+},
+
+{
   name: "HelpSwap",
   desc: "An Automated Market Maker (AMM) decentralized exchange inspired by Uniswap V1",
   link: "https://github.com/shola-devv/HelpSwap.git",
