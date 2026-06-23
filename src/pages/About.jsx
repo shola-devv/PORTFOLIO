@@ -85,6 +85,7 @@ stack: ["Next.js(javascript)", "Node.js",  ]
 ];
 
 
+
 function usePlusGrid(fieldRef, svgRef) {
   useEffect(() => {
     function draw() {
@@ -109,8 +110,10 @@ function usePlusGrid(fieldRef, svgRef) {
           const x = c * spacing;
           const y = r * spacing;
           const isOrange = (r * cols + c) % 7 === 3 || (r + c) % 11 === 5;
-          const color = isOrange ? "#E07B3A" : "#d0cec8";
-          const sw = isOrange ? 1.8 : 1;
+
+          const color = isOrange ? "#FF7A00" : "#8A8A8A";
+          const sw = isOrange ? 2.2 : 1.1;
+
           html += `<line x1="${x}" y1="${y - arm}" x2="${x}" y2="${y + arm}" stroke="${color}" stroke-width="${sw}"/>`;
           html += `<line x1="${x - arm}" y1="${y}" x2="${x + arm}" y2="${y}" stroke="${color}" stroke-width="${sw}"/>`;
         }
@@ -135,50 +138,52 @@ const Portfolio = () => {
   return (
     <div className="max-w-2xl mx-auto px-4 sm:px-6 py-10 sm:py-16 font-mono">
 
-      {/* ── About ── */}
       <section className="mb-14 sm:mb-20">
-        {/*
-          Uncomment when profile photo is available:
-          <img
-            src="/mypic.jpeg"
-            alt="Shola Emmanuel Fayinminu"
-            className="w-20 h-20 rounded-full mb-5 block"
-          />
-        */}
-        <h1 className="text-xl sm:text-2xl font-normal text-neutral-900 leading-snug mb-4">
+        <h1 className="text-xl sm:text-2xl font-normal text-black leading-snug mb-4">
           Shola Emmanuel<br />Fayinminu
         </h1>
-        <p className="text-[13px] text-neutral-400 tracking-widest mb-5">
+
+        <p className="text-[13px] text-neutral-600 tracking-widest mb-5">
           Web3 software developer
         </p>
-        <p className="text-sm text-neutral-500 leading-relaxed mb-3">
+
+        <p className="text-sm text-neutral-700 leading-relaxed mb-3">
           I'm a web3 software developer with a
           strong interest in the future of decentralized technology. I build full-stack web3 applications using the MERN and PERN stacks, write Solidity smart contracts, and handle on-chain interactions with viem and ethers.js.
         </p>
-         
-        <p className="text-sm text-neutral-500 leading-relaxed">
+
+        <p className="text-sm text-neutral-700 leading-relaxed">
           I'm strongly interested in the gamification of web3 and
           passionate about building software that feels{" "}
-          <span className="text-[#E07B3A]">forward-looking </span>
-        - My work and portfolio reflects just that.
+          <span className="text-[#FF7A00]">forward-looking </span>
+          - My work and portfolio reflects just that.
         </p>
       </section>
 
-      {/* ── Skills ── */}
       <section className="mb-14 sm:mb-20">
-        <p className="text-[11px] uppercase tracking-widest text-neutral-300 mb-6">Skills</p>
-        <div ref={fieldRef} className="relative overflow-hidden min-h-44 sm:min-h-56 p-6 sm:p-12">
+        <p className="text-[11px] uppercase tracking-widest text-neutral-500 mb-6">
+          Skills
+        </p>
+
+        <div
+          ref={fieldRef}
+          className="relative overflow-hidden min-h-44 sm:min-h-56 p-6 sm:p-12"
+        >
           <svg
             ref={svgRef}
             className="absolute inset-0 w-full h-full"
             xmlns="http://www.w3.org/2000/svg"
           />
+
           <div className="relative z-10 flex flex-wrap gap-x-5 gap-y-3">
             {skills.map((skill) => (
               <span
                 key={skill}
-                className="text-[13px] text-neutral-900 leading-relaxed tracking-wide"
-                style={{ background: "rgba(255, 255, 255, 1)", padding: "2px 0" }}
+                className="text-[13px] text-black leading-relaxed tracking-wide"
+                style={{
+                  background: "rgba(255,255,255,1)",
+                  padding: "2px 0",
+                }}
               >
                 {skill}
               </span>
@@ -187,85 +192,86 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* ── Projects ── */}
       <section className="mb-14 sm:mb-20">
-        <p className="text-[11px] uppercase tracking-widest text-neutral-300 mb-6">Projects</p>
-        {projects.map((project, i) => (
-          <div
-            key={project.name}
-            className="py-7"
-          >
+        <p className="text-[11px] uppercase tracking-widest text-neutral-500 mb-6">
+          Projects
+        </p>
+
+        {projects.map((project) => (
+          <div key={project.name} className="py-7">
             <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 sm:gap-0 mb-2">
-              <span className="text-[15px] font-normal text-neutral-900">
+              <span className="text-[15px] font-normal text-black">
                 {project.name}
               </span>
+
               <div className="flex gap-4">
                 <a
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs text-[#E07B3A] underline tracking-wider"
+                  className="text-xs text-[#FF7A00] underline tracking-wider"
                 >
                   live ↗
                 </a>
+
                 <a
                   href={project.code}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs text-[#E07B3A] underline tracking-wider"
+                  className="text-xs text-[#FF7A00] underline tracking-wider"
                 >
                   code ↗
                 </a>
               </div>
             </div>
-            <p className="text-[13px] text-neutral-500 leading-relaxed mb-2">
+
+            <p className="text-[13px] text-neutral-700 leading-relaxed mb-2">
               {project.desc}
             </p>
-            <p className="text-[11px] text-[#E07B3A] leading-relaxed tracking-wide">
+
+            <p className="text-[11px] text-[#FF7A00] leading-relaxed tracking-wide">
               {project.stack.join(" · ")}
             </p>
           </div>
         ))}
       </section>
 
-      {/* ── Footer ── */}
-      <div
-        className="flex gap-6 pt-10 sm:pt-12 "
-        
-      >
+      <div className="flex gap-6 pt-10 sm:pt-12">
         <a
           href={`https://twitter.com/intent/follow?screen_name=${myUsername}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-xs text-[#E07B3A] underline tracking-widest"
+          className="text-xs text-[#FF7A00] underline tracking-widest"
         >
           X / Twitter ↗
         </a>
+
         <a
           href="https://github.com/shola-devv"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-xs text-[#E07B3A] underline tracking-widest"
+          className="text-xs text-[#FF7A00] underline tracking-widest"
         >
           GitHub ↗
         </a>
+
         <a
           href="mailto:creekemmanuelf@gmail.com"
-          className="text-xs text-[#E07B3A] underline tracking-widest"
+          className="text-xs text-[#FF7A00] underline tracking-widest"
         >
           Email ↗
         </a>
 
-         <a
+        <a
           href="https://medium.com/@olusholaemmanuelfayinminu"
-          className="text-xs text-[#E07B3A] underline tracking-widest"
+          className="text-xs text-[#FF7A00] underline tracking-widest"
         >
           Medium ↗
         </a>
       </div>
-
     </div>
   );
 };
+
 
 export default Portfolio;
